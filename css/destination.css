@@ -1,0 +1,247 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+main{
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* tablet screens */
+@media (min-width:601px) and (max-width:900px) {
+    main{
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
+}
+/* small screens and mobil screens */ 
+@media (min-width:415px) and (max-width:600px) {
+    main{
+        background-image: url("../assets/destination/background-destination-mobile.jpg");
+    } 
+}
+main .container{
+    width: 80%;
+    margin-top: 145px;
+}
+.title{
+    
+}
+.title p{
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.title span{
+    color: #777;
+    font-weight: 500;
+    margin-right: 16px;
+}
+.wrapper{
+    width: 100%;
+    margin-top: 21px;
+    padding: 0px 20px;
+}
+.wrapper nav {
+    display: flex;
+    justify-content: end;
+}
+.wrapper .items {
+    width: 335px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.wrapper span{
+    color: #777;
+    padding: 9px 0px;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.wrapper span.active,
+.wrapper span:hover{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+@media (max-width:370px) {
+    .wrapper .items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+    .wrapper span{
+        margin: 2px;
+    }
+    .wrapper{
+        padding: 0px 10px;
+    }
+}
+.content{
+    margin-top: 50px;
+}
+.planet_content{
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+div.show{
+    display: flex;
+    animation: show_animation linear .3s;
+}
+@keyframes show_animation {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+div.hide{
+    display: none;
+}
+.image{
+    width: 400px;
+    max-width: 100%;
+}
+.image img {
+    width: 100%;
+}
+.text{
+    width: 376px;
+    max-width: 100%;
+}
+.desc{
+    padding-bottom: 26px;
+    border-bottom: 1px solid #777;
+}
+.text h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 5rem;
+    margin-bottom: 22px
+}
+.text .desc p{
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.info .info_name{
+    color: #777;
+    margin-bottom: 5px;
+}
+.info p:last-of-type{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+@media (max-width:1200px) {
+    .planet_content{
+        justify-content: space-between;
+    }
+}
+@media (max-width:1050px) and (min-width:768px) {
+    main .container{
+        width: 90%;
+    }   
+}
+@media (max-width:951px) and (min-width:801px) {
+    .image{
+        width:360px;
+    }
+    .text{
+        width:330px;   
+    }
+    main .container{
+        width: 95%;
+    }
+}
+@media (max-width:800px) {
+    .planet_content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text{
+        width: 100%;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .info{
+        justify-content: space-around;
+    }
+    .desc{
+        border-bottom: 0;
+    }
+    .wrapper nav{
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+    .wrapper{
+        position: relative;
+    }
+    .image{
+        margin-bottom: 25px;
+    }
+    main .container{
+        margin-top: 170px;
+    }
+}
+@media (max-width:500px) {
+    .info{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .wrapper nav{
+        top: 48%;
+        left: 48%;
+    }
+    main .container{
+        width: 95%;
+    }
+    .text{
+        margin-top: 130px;
+    }
+    .info div:first-of-type{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:370px) {
+    .title p {
+        font-size: 16px;
+    }
+    .image {
+        width:84%
+    }
+    .text{
+        margin-top: 54px;
+        width: 96%;
+    }
+    .wrapper .items{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .wrapper nav{
+        width: 100%;
+        top: 37%;
+    }
+    .text .desc p{
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,131 @@
+main{
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* tablet screens */
+@media (min-width:601px) and (max-width:900px) {
+    main{
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+}
+/* small screens */
+@media (min-width:415px) and (max-width:600px) {
+    main{
+        background-image: url("../assets/home/background-home-mobile.jpg");
+    } 
+}
+/* mobile screens */
+@media (max-width:414px) {
+    main{
+        background-image: url("../assets/home/background-home-mobile.jpg");
+    }
+}
+.content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font);
+    margin-top: 134px;
+}
+.content .text{
+    color: #fff;
+    max-width:462px;
+}
+.text p {
+    font-weight: 300;
+}
+p:first-of-type{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+p:last-of-type{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.text h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 8rem;
+    letter-spacing: 6px;
+    margin: 10px 0px;
+}
+.explore{
+    background: #fff;
+    display: block;
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 181px;
+    position: relative;
+    z-index: 2;
+}
+.explore a {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 2.5px;
+    transition: .3s;
+    z-index: 2;
+}
+.explore::before{
+    width: 0px;
+    height: 0;
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: -1;
+}
+@keyframes after_feed {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    25%{
+        width: 181px;
+        height: 181px;
+    }
+    100%{
+        width: 242px;
+        height: 242px;
+        opacity: 0;
+    }
+}
+/* I can't add the animation in active state because active will open a new page */
+.explore:has(a:hover)::before{
+    animation: after_feed .5s linear;
+}
+@media (max-width:900px) {
+    .content{
+        flex-direction: column;
+    }
+    .content .text{
+        text-align: center;
+        margin-bottom: 42px;
+        max-width: 100%;
+    }
+}
+@media (max-width:480px) {
+    .content{
+        width: 91%;
+    }
+    .text h1{
+        font-size: 6rem;    
+    }
+    .text p:first-of-type{
+        font-size: 1.2rem;
+    }
+}

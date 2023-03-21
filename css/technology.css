@@ -1,0 +1,243 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+main{
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+/* tablet screens */
+@media (min-width:601px) and (max-width:900px) {
+    main{
+        background-image: url("../assets/technology/background-technology-tablet.jpg");
+    }
+}
+/* small screens and mobil screens */ 
+@media (min-width:415px) and (max-width:600px) {
+    main{
+        background-image: url("../assets/technology/background-technology-mobile.jpg");
+    } 
+}
+main .container{
+    width: 90%;
+    margin-top: 140px;
+}
+.wrapper nav{
+    margin-right: 43px;
+}
+@media (min-width:1300px) {
+    main .container{
+        width: 85%;
+    }
+    .wrapper nav{
+        margin-right: 100px
+    }
+}
+.title p{
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.title span{
+    color: #777;
+    font-weight: 500;
+    margin-right: 16px;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 21px;
+}
+.wrapper .items {
+    display: flex;
+    flex-direction: column;
+} 
+.wrapper span{
+    color: #fff;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    margin-bottom: 37px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.wrapper span:last-of-type{
+    margin-bottom: 0;
+}
+.wrapper span.active,
+.wrapper span:hover{
+    color: #000;
+    background-color: #fff;
+    font-weight: 400;
+}
+@media (max-width:370px) {
+    .wrapper .items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+    .wrapper span{
+        margin: 2px;
+    }
+    .wrapper{
+        padding: 0px 10px;
+    }
+}
+.content{
+    margin-top: 50px;
+    flex: 1;
+}
+.tec_content{
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+div.show{
+    display: flex;
+    animation: show_animation linear .3s;
+}
+@keyframes show_animation {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+div.hide{
+    display: none;
+}
+.image{
+    width: 44%;
+    max-width: 431px;
+}
+.image img {
+    width: 100%;
+}
+.image .smaller{
+    display: none;
+}
+.text{
+    width: 44%;
+    max-width: 531px;
+}
+.desc{
+    padding-bottom: 26px;
+}
+.text h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 22px
+}
+.text .desc p{
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+.text .desc p:first-of-type{
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+@media (max-width:1080px) and (min-width:851px) {
+    main .container{
+        width: 95%;
+    }
+    .text h1{
+        font-size: 2.6rem;
+    }   
+}
+@media (max-width:850px) {
+    .title{
+        margin-top: 36px;
+        padding: 0px 30px;
+    }
+    .wrapper{
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 88px;
+    }
+    .wrapper nav{
+        width: 100%;
+        margin-right: 0px;
+    }
+    .wrapper .items{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .wrapper span{
+        margin-right: 36px;
+    }
+    .content{
+        width: 100%;
+    }
+    .tec_content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text{
+        width: 100%;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .image{
+        margin-bottom: 25px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .image .bigger{
+        display: none;
+    }
+    .image .smaller{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    main .container{
+        margin-top: 170px;
+        width: 100%;
+    }
+    .wrapper span:last-of-type{
+        margin-right: 0px;
+    }
+}
+@media (max-width:530px) {
+    .text{
+        padding: 0px 30px
+    }
+}
+@media (max-width:430px) {
+    .title p {
+        font-size: 16px;
+    }
+    .text .desc p{
+        font-size: 13px;
+    }
+    .text h1{
+        font-size: 2rem;
+    }
+    .text{
+        padding: 0px 21px
+    }
+}

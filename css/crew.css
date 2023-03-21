@@ -1,0 +1,220 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+main{
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+/* tablet screens */
+@media (min-width:601px) and (max-width:900px) {
+    main{
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+}
+/* small screens and mobil screens */ 
+@media (min-width:415px) and (max-width:600px) {
+    main{
+        background-image: url("../assets/crew/background-crew-mobile.jpg");
+    } 
+}
+main .container{
+    width: 80%;
+}
+.title p{
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.title span{
+    color: #777;
+    font-weight: 500;
+    margin-right: 16px;
+}
+.wrapper{
+    width: 100%;
+    margin-top: 21px;
+    padding: 0px 20px;
+    position: relative;
+}
+.wrapper nav {
+    position: absolute;
+    bottom: 20px;
+}
+.wrapper .items {
+    width: 100px;
+} 
+.wrapper span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #777;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin-left: 13px;
+}
+.wrapper span:first-of-type{
+    margin-left: 0;
+}
+.wrapper span.active,
+.wrapper span:hover{
+    background-color: #fff;
+}
+@media (max-width:370px) {
+    .wrapper .items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+    .wrapper span{
+        margin: 2px;
+    }
+    .wrapper{
+        padding: 0px 10px;
+    }
+}
+.content{
+    margin-top: 22px;
+}
+.crew_content{
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: row-reverse;
+    min-height: 549px;
+}
+div.show{
+    display: flex;
+    animation: show_animation linear .3s;
+}
+@keyframes show_animation {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+div.hide{
+    display: none;
+}
+.image{
+    width: 400px;
+    max-width: 100%;
+}
+.content div:nth-child(2) .image{
+    width:360px;
+}
+.image img {
+    width: 100%;
+}
+.text{
+    width: 470px;
+    max-width: 100%;
+    padding-bottom: 130px;
+}
+.text p:first-of-type{
+    color: #777;
+    font-size: 27px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    letter-spacing: 2px;
+}
+.text h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-bottom: 22px;
+    font-weight:300;
+    letter-spacing: 1px;
+}
+.text .desc p:last-of-type{
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+@media (max-width:1050px) and (min-width:768px) {
+    main .container{
+        width: 90%;
+    }   
+}
+@media (max-width:951px) and (min-width:801px) {
+    .image{
+        width:390px;
+    }
+    .text{
+        width:360px;   
+    }
+    .text h1{
+        font-size: 2rem;
+    }
+    main .container{
+        width: 95%;
+    }
+}
+@media (max-width:800px) {
+    .crew_content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .content div:nth-child(2) .image img{
+        width: 87%;
+    }
+    .text{
+        width: 100%;
+        margin-top: 49px;
+        text-align: center;
+        padding-bottom: 74px;
+    }
+    main .container{
+        margin-top: 170px;
+    }
+    .wrapper nav{
+        bottom: 60%;
+        left: 50%;
+        transform: translateX(-61%);
+    }
+}
+@media (max-width:531px) {
+    main .container{
+        width: 95%;
+    }
+    .text{
+        margin-top: 20px;
+    }
+    .wrapper nav{
+        bottom: 58%;
+    }
+}
+@media (max-width:430px) {
+    .title p {
+        font-size: 20px;
+    }
+    .image {
+        width:91%
+    }
+    .text{
+        margin-top: 54px;
+        width: 100%;
+    }
+    .text h1{
+        font-size: 1.7rem;
+    }
+    .text .desc p{
+        font-size: 18px;
+    }
+    .wrapper nav{
+        bottom: 51%;
+        transform: translateX(-44%);
+    }
+}
